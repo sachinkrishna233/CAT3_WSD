@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+
+<body>
+    <div>
+        <form ng-submit="updateEntry()">
+            <div class="row">
+                <label class="form-label">Employee ID</label>
+                <select class="form-select form-select-lg" ng-model="emp_id" required ng-options="data.emp_id for data in datas"
+                    ng-change="getId()">
+                    <option selected disabled value="">Select one</option>
+                </select>
+            </div>
+            <div class="row">
+                <label class="form-label">Location</label>
+                <input type="text" ng-model="emp_location" required>
+            </div>
+            <div>
+                <input type="submit" value="Update" class="btn btn-secondary">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

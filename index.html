@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFOSYS SPRING</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"
+        integrity="sha512-y1qD3hz/IAf8W4+/UMLZ+CN6LIoUGi7srWJ3r1R17Hid8x0yXe+1B5ZelkaL1Mjzedzu0Cg3HBvDG02SAgSzBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <nav>
+        <div class="title">INFOSYS SPRING</div>
+        <ul>
+            <a href="#/"><li>Home</li></a>
+            <a href="#create"><li>Add Employee</li></a>
+            <a href="#search"><li>Search</li></a>
+            <a href="#update"><li>Update</li></a>
+            <a href="#delete"><li>Delete</li></a>
+        </ul>
+    </nav>
+    <ng-view></ng-view>
+</body>
+
+</html>
