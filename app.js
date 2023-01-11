@@ -10,7 +10,19 @@
         })
 
         .controller('createController', function ($scope) {
+            
             $scope.createEntry = function () {
+                // var emp_id = $scope.emp_id
+                // var emp_salary = $scope.emp_salary
+                var emp_name = $scope.emp_name
+                var emp_designation = $scope.emp_designation
+                var emp_department = $scope.emp_department
+                var emp_location = $scope.emp_location 
+
+                if (emp_name.match(/[0-9]/g) || emp_designation.match(/[0-9]/g) || emp_department.match(/[0-9]/g) || emp_location.match(/[0-9]/g)) {
+                    window.alert("Wrong Input values")
+                    return false;
+                }
                 var newData = "{\"emp_id\":\"" + $scope.emp_id + "\", \"emp_name\":\"" + $scope.emp_name + "\", \"emp_designation\":\"" + $scope.emp_designation + "\", \"emp_department\":\"" + $scope.emp_department + "\", \"emp_salary\":\"" + $scope.emp_salary + "\", \"emp_location\":\"" + $scope.emp_location + "\"}";
 
                 fetch('http://localhost:3022/add', {
